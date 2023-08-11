@@ -109,6 +109,10 @@ public class TestNGTodo2 {
         Thread.sleep(150);
 
         System.out.println("TestFinished");
+        System.out.println("rakesh finished");
+        System.out.println("rakesh finished");
+        System.out.println("rakesh finished");
+        System.out.println("rakesh finished");
 
     }
 
