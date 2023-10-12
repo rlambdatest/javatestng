@@ -1,5 +1,17 @@
 name: Java CI with Maven
 
+- task: LambdatestResults@1
+- task: Maven@4
+  inputs:
+    mavenPomFile: 'single.xml'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
+
 on:
   push:
     branches: [ "main" ]
